@@ -1,10 +1,10 @@
-package com.example.demo;
+package Ejercicio3_MariaLauraBrenes.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Ejercicio3MariaLauraBrenesApplicationTests {
+class Ejercicio3ApplicationTests {
 
 	@Test
 	void contextLoads() {
