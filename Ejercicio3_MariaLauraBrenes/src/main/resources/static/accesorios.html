@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="es">
+   <head>
+        <title>Accesorios</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Esta es la cuarta pagina del Ejercicio3">
+        <meta name="keywords" content="html5, css3, web, images, videos, iframe, modales, botones, DOM Events, listas, encabezados">
+        <link href="css/CSSSAcc.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap">
+    </head>
+    
+<body>
+    <header class="header">
+    <nav class="nav">
+        <a href="index.html" class="logo">CyberGamesCR</a>
+        <ul class="nav-menu">
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="juegos.html">Juegos</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ofertas.html">Ofertas</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="novedades.html">Novedades</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="cuenta.html">Mi cuenta</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="soporte.html">Soporte</a></li>
+        </ul>
+    </nav>
+</header>
+
+ <h1 style="text-align: center;">Accesorios para tu PC</h1>
+<h2>Mouses</h2>
+
+<section style="text-align: left; margin: 30px 0;">
+    <div class="mouse-container">
+        <div class="mouse1">
+            <h3>Logitech MX Master 3S</h3>
+            <img src="images/master.jpg" alt="MX Master 3S" width="300" height="300">
+            <p>Mouse para juegos con iluminación RGB y sensor de alta precisión.</p>
+            <p>Mira el review de este mouse</p>
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/_dijde_WQgg"  
+                title="Review del Logitech MX Master 3S"
+                style="border: none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p>Precio: 25 000 Colones</p>
+            <button type="button" onclick="abrirModal('modalCompra')">Comprar Ahora</button>
+        </div>
+        
+        <div class="mouse2">
+            <h3>Razer DeathAdder V2</h3>
+            <img src="images/razer.png" alt="Razer DeathAdder V2" width="300" height="300">
+            <p>Mouse ergonómico ideal para largas sesiones de juego.</p>
+            <p>Mira el review de este mouse</p>
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/8TYPPH_W6-Q" 
+                title="Review del Razer DeathAdder V2"
+                style="border: none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p>Precio: 70 000 Colones</p>
+            <button type="button" onclick="abrirModal('modalCompra')">Comprar Ahora</button>
+        </div>
+    </div>
+    
+    <!--Modal -->
+    <div id="modalCompra" class="modal" style= "display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="color: white;  font-family: 'Play', sans-serif; font-size: 18px; ">Compra Exitosa</h5>
+            </div>
+            <div class="modal-body">
+                <p style="color: white;  font-family: 'Play', sans-serif; font-size: 18px; ">¡Juego comprado con éxito!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="cerrarModal('modalCompra')">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</section>
+
+<p style="text-align: center; font-size: 24px; text-decoration: underline; color: red;">
+    <strong onclick="this.innerHTML='Revisa en otro momento, todavía no se han agregado los accesorios'">Se agregarán más accesorios próximamente</strong>
+</p>
+
+    <footer style="text-align: center; margin-top: 25px;">
+        <p>© 2024 Tienda CRGames. Todos los derechos reservados.</p>
+    </footer>
+
+<!--Script para poder abrir el Modal y cerrarlo con el boton -->
+<script>
+    function abrirModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function cerrarModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="es">
+<head>
+        <title>Blog</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Esta es la sexta pagina del Ejercicio 3">
+        <meta name="keywords" content="html5, css3, web, audios, formulario,javascript, js popup box, listas, encabezados">
+        <link href="css/CSSBlog.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play&display=swap" >
+    </head>
+<body>
+    
+    <header class="header">
+    <nav class="nav">
+        <a href="index.html" class="logo">CyberGamesCR</a>
+        <ul class="nav-menu">
+
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="juegos.html">Juegos</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ofertas.html">Ofertas</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="novedades.html">Novedades</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="accesorios.html">Accesorios</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="cuenta.html">Mi cuenta</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="soporte.html">Soporte</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h2>Mi Blog</h2>
+<br>
+<section style="font-family: 'Play', sans-serif; text-align: center;" id="blog">
+<img src="images/concord.png" alt="concord" width="300">
+<p>Concord es tan malo como dicen?. Deja tu cometario al respecto en la caja inferior</p>
+<p>Tambien te invitamos a escuchar nuestro podcast sobre el tema</p>
+ <audio controls>
+            <source src="audios/concord.mp3" type="audio/mp3">
+            Su explorador no soporta el formato de audio<code>audio</code>
+</audio>
+</section>
+
+
+<!--https://www.w3schools.com/js/js_htmldom_events.asp-->
+
+<h3>Comentarios</h3>
+<form name="commentForm">
+    Nombre: <input type="text" name="name"><br>
+    Comentario:<br>
+    <textarea name="comment" rows="4" cols="50"></textarea><br>
+    <input type="button" value="Comentar" onclick="addComment()">
+</form>
+
+<h3>Lista de Comentarios</h3>
+<ul id="commentList">
+
+</ul>
+    
+     <footer style="text-align: center; margin-top: 25px;">
+        <p>© 2024 Tienda CRGames. Todos los derechos reservados.</p>
+    </footer>
+
+<!-- https://www.w3schools.com/jsref/coll_doc_forms.asp -->
+<!-- https://www.w3schools.com/jsref/met_document_getelementbyid.asp -->
+
+
+    <script>
+        <!-- Se valida que todos los campos esten completos -->
+        function validateCommentForm() {
+            let name = document.forms["commentForm"]["name"].value;
+            let comment = document.forms["commentForm"]["comment"].value;
+            if (name == "" || comment == "") {
+                alert("Todos los campos deben ser completados.");
+                return false;
+            }
+            return true;
+        }
+
+        <!--Despues de la validar que los campos esten completos , se corre la funcion para agregar el comentario -->
+        function addComment() {
+                <!--Accedemos a la lista de comentarios del blog -->
+                let name = document.forms["commentForm"]["name"].value;
+                let comment = document.forms["commentForm"]["comment"].value;
+                
+                <!--Accedemos a la lista de comentarios del blogde comentario-->
+                let commentList = document.getElementById("commentList");
+                let newComment = document.createElement("li");
+                newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+
+                 <!--Agregamos el comentario ingresado a la lista de comentarios-->
+                commentList.appendChild(newComment);
+
+                 <!--Limpiamos los campos de nombre y comentario para poder ingresar otro comentario-->
+                document.forms["commentForm"].reset();
+                
+                 <!--Mostramos un pop-up alert (JS Alert) indicando que el comentario fue añadido-->
+                  alert("Comentario añadido, revisa la lista de comentarios.");
+        }
+    </script>
+
+</body>
+</html>

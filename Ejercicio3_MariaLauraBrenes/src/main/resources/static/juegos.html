@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="es">
+<head>
+    <title>Juegos en Venta</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Esta es la primera página del ejercicio 3">
+    <meta name="keywords" content="html5, css3, web, images, videos, modales, botones, DOM Events, listas, encabezados">
+    <link href="css/CSSJuegos.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">CyberGamesCR</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ofertas.html">Ofertas</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="novedades.html">Novedades</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="accesorios.html">Accesorios</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="cuenta.html">Mi cuenta</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <h1 style="text-align: center;">Juegos Disponibles</h1>
+ 
+ 
+<div class="game-container">
+<section id="juegoaccion" class="game">
+    <article>
+        <h3>Juegos de Accion</h3>
+        <h3 style="font-family: 'Noto Serif JP', serif;">Ghost of Tsushima</h3>
+        <img src="images/ghost.jpg" alt="Ghost of Tsushima" width="300">
+        <p style="text-align: center; font-family: 'Noto Serif JP', serif;">Ambientado en 1274 en Tsushima, el juego sigue al samurái Jin Sakai, uno de los pocos supervivientes de la invasión mongola a Japón, quien debe dominar el camino del Fantasma para liberar su isla y su pueblo.</p>
+        <p style="text-align: center; background-color: red; border-radius: 15px; padding: 10px; display: inline-block;">Precio: 40.000 Colones</p>
+        <br>
+        <a class="gameplay-link" href="https://youtu.be/ITWOTgBNKzY?si=AdDkgnhtHG5o7ERO" target="_blank">Ver gameplay aquí</a>
+        </article>
+    
+        <h2>Trailer del Juego</h2>
+        <video width="640" height="360" controls>
+            <source src="videos/Ghost.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+        <br>
+        <button type="button" onclick="abrirModal('modalCompra')">Comprar Ahora</button>
+
+</section>
+
+ 
+<section id="juegoaventura" class="game">
+     <article>
+    <h3>Juegos de Aventura</h3>
+
+        <h3 style="font-family: 'Creepster', cursive;">Last of Us 2</h3>
+        <img src="images/tlou2.png" alt="Last of Us 2" width="300">
+        <p style="text-align: center; font-family: 'Creepster', cursive;">Ambientado cinco años después de The Last of Us, el juego sigue a Ellie, que busca venganza tras una tragedia, y a Abby, una soldado atrapada en un conflicto entre su milicia y un culto religioso.</p>
+        <p style="text-align: center; background-color: red; border-radius: 15px; padding: 10px; display: inline-block;">Precio: 40.000 Colones</p>
+        <br>
+        <a class="gameplay-link" href="https://youtu.be/YIVtaZ_m1T8?si=aEFCB2du2hbmHwXF" target="_blank">Ver gameplay aquí</a>
+        </article>
+       
+        <h2>Trailer del Juego</h2>
+        <video width="640" height="360" controls>
+            <source src="videos/tlou2.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+        <br>
+        <button type="button" onclick="abrirModal('modalCompra')">Comprar Ahora</button>
+
+</section>
+    
+    <!--Modal -->
+</div>
+ 
+    <div id="modalCompra" class="modal" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="color: white;  font-family: 'Play', sans-serif; font-size: 18px; ">Compra Exitosa</h5>
+                </div>
+                <div class="modal-body">
+                    <p style="color: white;  font-family: 'Play', sans-serif; font-size: 18px; text-align: center">¡Juego comprado con éxito!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="cerrarModal('modalCompra')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<br>
+<br>
+
+<p style="text-align: center; font-size: 24px; text-decoration: underline; color: red;">
+    <strong onclick="this.innerHTML='Revisa en otro momento , todavia no se han agregado los juegos'">Se agregarán más juegos próximamente</strong>
+</p>
+<br>
+
+<footer style="text-align: center; margin-top: 25px;">
+    <p>© 2024 Tienda CyberGamesCR. Todos los derechos reservados.</p>
+</footer>
+
+
+ <!--Script para poder abrir el Modal y cerrarlo con el boton -->
+<script>
+    function abrirModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function cerrarModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

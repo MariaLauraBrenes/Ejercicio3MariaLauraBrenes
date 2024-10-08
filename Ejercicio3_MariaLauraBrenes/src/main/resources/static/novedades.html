@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="es">
+    <head>
+        <title>Novedades</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Esta es la tercera pagina del ejercicio3">
+         <meta name="keywords" content="html5, css3, web, images, videos, DOM Events, listas, encabezados">
+        <link href="css/CSSNov.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+    </head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="logo">CyberGamesCR</a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="ofertas.html">Ofertas</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="accesorios.html">Accesorios</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="cuenta.html">Mi cuenta</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <header>
+        <h1>Novedades</h1>
+        <h2>Próximos Juegos</h2>
+    </header>
+
+<div class="game-container">
+    <section id="gears" class="game">
+        <article>
+            <h3>Gears of Wars E-Day</h3>
+            <img src="images/gears.jpg" alt="Gears of Wars E-Day" width="300" height="300">
+            <p style="font-family: 'Anton', sans-serif; font-size: 20px;">Gears of War: E-Day es el octavo juego de la franquicia Gears of War. Es una precuela que toma lugar en el Día de la Emergencia, catorce años antes del primer juego, durante el cual la Horda Locust emerge de la superficie de Sera para comenzar su guerra genocida contra la humanidad, y sigue al Sargento Marcus Fenix y al Cabo Dominic Santiago luchando por proteger a los civiles.</p>
+        </article>
+        
+        <h2>Trailer del Juego</h2>
+        <video width="640" height="360" controls autoplay muted>
+            <source src="videos/EDay.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+        </video>
+        <p style="font-family: 'Anton', sans-serif; font-size: 20px;">
+            <strong onclick="this.innerHTML='Sin fecha de salida'" >Fecha de salida:</strong>
+        </p>
+
+        <h2>Cambios Recientes</h2>
+        <ul>
+            <li>Cambio 1: Mejores gráficos y mecánicas.</li>
+            <li>Cambio 2: Nuevos personajes y misiones que no fueron vistos en el Gears of War 1.</li>
+        </ul>
+    </section>
+    
+    <section id="sh2" class="game">
+        <article>
+            <h3 style="font-family: 'Fruktur', sans-serif;">Silent Hill 2 Remake</h3> 
+            <img src="images/sh2.png" alt="Silent Hill 2 Remake" width="300" height="300">
+            <p style="font-family: 'Fruktur', sans-serif; font-size: 20px;">Silent Hill 2 Remake es una reimaginación del clásico juego de terror psicológico. El juego sigue a James Sunderland, quien recibe una carta de su difunta esposa, invitándolo a visitar el misterioso pueblo de Silent Hill.</p>
+        </article>
+        
+        <h2>Trailer del Juego</h2>
+        <video width="640" height="360" controls autoplay muted>
+            <source src="videos/sh2.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
+        </video>
+        <p style="font-family: 'Fruktur', sans-serif; font-size: 20px;">
+            <strong onclick="this.innerHTML='Octubre 2024'" >Fecha de salida:</strong>
+        </p>
+
+        <h2>Cambios Recientes</h2>
+        <ul>
+            <li>Cambio 1: Mejores gráficos y mecánicas.</li>
+            <li>Cambio 2: Cambios en la historia principal comparado con el juego original.</li>
+        </ul>
+    </section>
+</div>
+
+    <footer style="text-align: center; margin-top: 25px;">
+        <p>© 2024 Tienda CyberGamesCR. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+</html>
